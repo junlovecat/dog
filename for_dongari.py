@@ -44,7 +44,6 @@ rhotkey='report error by !report'
 client=commands.Bot(command_prefix='!',help_command=None)
 status=cycle(['도움말은 !help',v,pv,rhotkey,'패치노트는 !patch'])
 BASE = "https://youtube.com/results"
-token='Nzk5NDUyMTE3NDgzNTIwMDQw.YADxzQ.0UbM02qAQxDQ1HrlHZKcSknef34'
 warned=[]
 
 prov_list = [
