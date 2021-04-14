@@ -603,5 +603,5 @@ async def on_message(message):
     await client.process_commands(message)
 
 ####################################################################################################
-client.run(os.environ["BOT_TOKEN"])
+client.run(os.environ['BOT_TOKEN'])
 # https://discord.com/oauth2/authorize?client_id=799452117483520040&permissions=8&scope=bot 
