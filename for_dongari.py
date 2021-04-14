@@ -150,7 +150,7 @@ async def help(ctx):
 
 @client.command()
 async def code(ctx):
-    await ctx.send('dongaricode.kro.kr')
+    await ctx.send('https://dongaricode.kro.kr')
     await ctx.send('코드입니다.')
     
 # '''
