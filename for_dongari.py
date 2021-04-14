@@ -43,7 +43,6 @@ pv='파이썬 3.6.8 64bit'
 rhotkey='report error by !report'
 client=commands.Bot(command_prefix='!',help_command=None)
 status=cycle(['도움말은 !help',v,pv,rhotkey,'패치노트는 !patch'])
-directory=os.path.dirname(__file__)
 BASE = "https://youtube.com/results"
 token='Nzk5NDUyMTE3NDgzNTIwMDQw.YADxzQ.0UbM02qAQxDQ1HrlHZKcSknef34'
 warned=[]
