@@ -143,13 +143,18 @@ async def help(ctx):
     embed.add_field(name="!(검색 기능)",value='cbs, corona, meals, weather, 재난안전문자',inline=True)
     embed.add_field(name="!(서버 기능) (int)",value="clear",inline=True)
     embed.add_field(name="!(서버 기능) (char)",value="encode, decode, report",inline=True)
-    embed.add_field(name="!(서버 기능)",value="Bot, help, info, name, patch, ping, send, server, 서버, maker, ",inline=True)
+    embed.add_field(name="!(서버 기능)",value="Bot, code, help, info, name, patch, ping, send, server, 서버, maker",inline=True)
     embed.add_field(name='!(어드민 기능)',value='kick, warn',inline=True)
     embed.add_field(name='!(시간 요소)',value='time, clock',inline=True)
     embed.add_field(name='!(다른 요소)',value="dice",inline=True)
     embed.add_field(name='!(개발 중)',value='None',inline=True)
     await ctx.send(embed=embed)
 
+@client.command()
+async def code(ctx):
+    await ctx.send('dongaricode.kro.kr')
+    await ctx.send('코드입니다.')
+    
 # '''
 
 #개그 요소
