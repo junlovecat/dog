@@ -1,0 +1,9 @@
+discord
+beautifulsoup4
+requests
+wikipedia
+google
+pytube
+pyneis
+neispy
+pyneis
