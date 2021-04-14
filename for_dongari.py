@@ -43,9 +43,6 @@ pv='파이썬 3.6.8 64bit'
 rhotkey='report error by !report'
 client=commands.Bot(command_prefix='!',help_command=None)
 status=cycle(['도움말은 !help',v,pv,rhotkey,'패치노트는 !patch'])
-directory=os.path.dirname(__file__)
-agreement = discord.File(directory+"\\agreement.txt")
-patchnote=discord.File(directory+"\\patchdong.txt")
 BASE = "https://youtube.com/results"
 token='Nzk5NDUyMTE3NDgzNTIwMDQw.YADxzQ.0UbM02qAQxDQ1HrlHZKcSknef34'
 warned=[]
@@ -92,15 +89,6 @@ def converte_kelvin_to_celsius(k):
 async def on_ready(): 
     change_status.start()
     print("online and ready")
-
-
-@client.event
-async def on_guild_join(guild):
-    for channel in guild.text_channels:
-        if channel.permissions_for(guild.me).send_messages:
-            await channel.send('Hello! Before the start, the admin of this server should read the terms of agreement.')
-            await channel.send(file=agreement)
-        break
 
 @client.event
 async def on_command_error(ctx,error):
@@ -545,8 +533,7 @@ async def patch(ctx):
     await ctx.send(v)
     await ctx.send("패치노트:")
     await ctx.send(tpatch)
-    await ctx.send('자세 한 것은 밑의 패치 노트 파일을 참고하시기 바랍니다.')
-    await ctx.send(file=patchnote)
+
 
 #시간 기능
 
@@ -612,5 +599,5 @@ async def on_message(message):
     await client.process_commands(message)
 
 ####################################################################################################
-client.run(os.environ["BOT_TOKEN"])
+client.run(os.environ['BOT_TOKEN'])
 # https://discord.com/oauth2/authorize?client_id=799452117483520040&permissions=8&scope=bot 
